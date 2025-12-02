@@ -1,0 +1,91 @@
+<?php /** @var \Magento\Backend\Block\Template $block */ ?>
+<?php
+    $logoUrl = $block->getViewFileUrl('LorisMenghi_Core::images/logo.png');
+    $contrassegnoLogoUrl = $block->getViewFileUrl('LorisMenghi_Core::images/logo_cod.png');
+    $contactUrl = 'https://www.lorismenghi.com/contact';
+    $spokiUrl = 'https://app.spoki.it/register';
+    $language = $block->getLanguageCode();
+?>
+
+<div class="lm-dashboard" data-language="<?= $block->escapeHtmlAttr($language) ?>">
+    <div class="lm-hero">
+        <div class="lm-hero__logo">
+            <img src="<?= $block->escapeUrl($logoUrl) ?>" alt="<?= $block->escapeHtml(__('Loris Menghi logo')) ?>" />
+        </div>
+        <div class="lm-hero__content">
+            <p class="lm-eyebrow"><?= $block->escapeHtml(__('LorisMenghi Admin Suite')) ?></p>
+            <h1 class="lm-title"><?= $block->escapeHtml(__('Dashboard & Module Status')) ?></h1>
+            <div class="lm-bilingual">
+                <p class="en"><?= $block->escapeHtml(__('All modules are crafted by Eng. Loris Menghi, an Italian freelance developer (www.lorismenghi.com).')) ?></p>
+                <p class="it"><?= $block->escapeHtml(__('Tutti i moduli sono sviluppati dall’ing. Loris Menghi, sviluppatore freelance italiano (www.lorismenghi.com).')) ?></p>
+            </div>
+            <div class="lm-bilingual">
+                <p class="en"><?= $block->escapeHtml(__('For tailored help, visit the contact page or reach out at info@lorismenghi.com.')) ?></p>
+                <p class="it"><?= $block->escapeHtml(__('Per assistenza personalizzata, visita la pagina contatti o scrivi a info@lorismenghi.com.')) ?></p>
+            </div>
+            <div class="lm-actions">
+                <a class="action-primary" target="_blank" rel="noopener" href="<?= $block->escapeUrl($contactUrl) ?>">
+                    <?= $block->escapeHtml(__('Contact page')) ?>
+                </a>
+                <a class="action-secondary" href="mailto:info@lorismenghi.com"
+>info@lorismenghi.com</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="lm-card">
+        <h2><?= $block->escapeHtml(__('About this suite')) ?></h2>
+        <div class="lm-bilingual">
+            <p class="en"><?= $block->escapeHtml(__('This hub collects all modules published under the LorisMenghi signature for Magento Open Source and Adobe Commerce.')) ?></p>
+            <p class="it"><?= $block->escapeHtml(__('Questo hub raccoglie tutti i moduli pubblicati con la firma LorisMenghi per Magento Open Source e Adobe Commerce.')) ?></p>
+        </div>
+        <div class="lm-bilingual">
+            <p class="en"><?= $block->escapeHtml(__('Every package follows the same standards: lean code, documented flows, and support that speaks both technical and business language.')) ?></p>
+            <p class="it"><?= $block->escapeHtml(__('Ogni pacchetto segue gli stessi standard: codice snello, flussi documentati e assistenza che parla sia tecnico sia business.')) ?></p>
+        </div>
+    </div>
+
+    <div class="lm-section">
+        <div class="lm-section__header">
+            <h2><?= $block->escapeHtml(__('Active modules')) ?></h2>
+            <p><?= $block->escapeHtml(__('More extensions will be listed here as they are released.')) ?></p>
+        </div>
+        <div class="lm-module-grid">
+            <div class="lm-card lm-module">
+                <div class="lm-module__head">
+                    <img src="<?= $block->escapeUrl($contrassegnoLogoUrl) ?>" alt="<?= $block->escapeHtml(__('Contrassegno module logo')) ?>" />
+                    <div>
+                        <h3><?= $block->escapeHtml(__('Cash-on-Delivery Order Confirmation for Spoki')) ?></h3>
+                        <p class="lm-meta">Version 1.0.2</p>
+                    </div>
+                </div>
+                <div class="lm-bilingual">
+                    <p class="en"><?= $block->escapeHtml(__('Sends a confirmation workflow to customers who place COD orders, ensuring the request is validated before shipping.')) ?></p>
+                    <p class="it"><?= $block->escapeHtml(__('Invia un flusso di conferma ai clienti che effettuano ordini in contrassegno, così la richiesta viene validata prima della spedizione.')) ?></p>
+                </div>
+                <div class="lm-bilingual">
+                    <p class="en"><?= $block->escapeHtml(__('The module relies on Spoki: you must have an active account, an automation, and a WhatsApp-approved template.')) ?></p>
+                    <p class="it"><?= $block->escapeHtml(__('Il modulo si appoggia a Spoki: serve un account attivo, un’automazione e un template approvato da WhatsApp.')) ?></p>
+                </div>
+                <ul class="lm-list">
+                    <li>
+                        <span class="en">Register or log in to Spoki: <?= $block->escapeHtml($spokiUrl) ?></span>
+                        <span class="it">Registra o accedi a Spoki: <?= $block->escapeHtml($spokiUrl) ?></span>
+                    </li>
+                    <li>
+                        <span class="en">Create an automation dedicated to COD confirmations.</span>
+                        <span class="it">Crea un’automazione dedicata alla conferma degli ordini in contrassegno.</span>
+                    </li>
+                    <li>
+                        <span class="en">Prepare a WhatsApp template and submit it for approval before use.</span>
+                        <span class="it">Prepara un template WhatsApp e invialo in approvazione prima dell’uso.</span>
+                    </li>
+                </ul>
+                <div class="lm-note">
+                    <p class="en"><?= $block->escapeHtml(__('Need us to configure everything? We can handle the onboarding with a two-hour support package (€45 per hour).')) ?></p>
+                    <p class="it"><?= $block->escapeHtml(__('Vuoi che configuriamo tutto noi? Possiamo gestire l’onboarding con un pacchetto di due ore di supporto (€45 all’ora).')) ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

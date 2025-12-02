@@ -1,0 +1,159 @@
+/* ====== LM top menu tile style ====== */
+.admin__menu #menu-lorismenghi-core-lm > a {
+    /* fa spazio per icona sopra e testo sotto */
+    padding-top: 44px !important;
+    height: auto !important;
+    line-height: 1.1 !important;
+    text-align: center !important;
+}
+
+/* icona grande centrata sopra */
+.admin__menu #menu-lorismenghi-core-lm > a:before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 30px;
+    height: 30px;
+
+    background: url("../images/lm.svg") no-repeat center;
+    background-size: 30px 30px;
+
+    opacity: .95;
+    margin: 0 !important;
+}
+
+/* testo sotto (Magento spesso usa .title) */
+.admin__menu #menu-lorismenghi-core-lm > a .title,
+.admin__menu #menu-lorismenghi-core-lm > a span {
+    display: block;
+    margin-top: 6px;
+    white-space: normal;
+}
+
+/* evita che l'icona "inline" spinga la scritta a destra */
+.admin__menu #menu-lorismenghi-core-lm > a:before {
+    display: block;
+}
+
+/* ====== LM dashboard styling ====== */
+.lm-dashboard {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+}
+
+.lm-hero {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    background: #0f264a;
+    border-radius: 10px;
+    box-shadow: 0 10px 28px rgba(0, 30, 60, 0.26);
+    color: #e8f3ff;
+}
+
+.lm-hero__logo img {
+    width: 220px;
+    max-width: 100%;
+    display: block;
+}
+
+.lm-hero__content .lm-title {
+    margin: 4px 0 10px;
+    font-size: 2.2rem;
+    color: #ffffff;
+}
+
+.lm-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: #7bd3ff;
+    margin: 0;
+}
+
+.lm-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.lm-actions .action-secondary {
+    color: #e8f3ff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(232, 243, 255, 0.4);
+}
+
+.lm-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 18px 20px;
+    box-shadow: 0 6px 16px rgba(0, 30, 60, 0.12);
+}
+
+.lm-section__header h2 {
+    margin-bottom: 4px;
+}
+
+.lm-module-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 16px;
+}
+
+.lm-module__head {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.lm-module__head img {
+    width: 120px;
+    height: auto;
+}
+
+.lm-meta {
+    margin: 4px 0 0;
+    color: #6c7a90;
+}
+
+.lm-bilingual {
+    margin-top: 8px;
+}
+
+.lm-bilingual p {
+    margin: 4px 0;
+}
+
+.lm-bilingual .en {
+    font-weight: 600;
+}
+
+.lm-dashboard[data-language="en"] .it,
+.lm-dashboard[data-language="it"] .en {
+    display: none;
+}
+
+.lm-list {
+    margin: 12px 0;
+    padding-left: 18px;
+}
+
+.lm-list li {
+    margin: 6px 0;
+    list-style: disc;
+}
+
+.lm-note {
+    background: #f4f8ff;
+    border-left: 4px solid #2f8ee5;
+    padding: 10px 12px;
+    border-radius: 6px;
+}

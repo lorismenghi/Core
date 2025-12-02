@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+
+    <menu>
+        <!-- ROOT “LM” (top-level): niente parent e niente action => si apre a tendina -->
+        <add id="LorisMenghi_Core::lm"
+             title="lorismenghi.com"
+             module="LorisMenghi_Core"
+             sortOrder="60"
+             resource="LorisMenghi_Core::all"/>
+
+        <!-- Prima voce figlia (landing) -->
+        <add id="LorisMenghi_Core::dashboard"
+             title="Dashboard"
+             module="LorisMenghi_Core"
+             sortOrder="10"
+             parent="LorisMenghi_Core::lm"
+             action="lorismenghi_core/index/index"
+             resource="LorisMenghi_Core::all"/>
+    </menu>
+</config>
+
