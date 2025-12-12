@@ -21,7 +21,7 @@ class Index extends Action
     {
         $resultPage = $this->resultPageFactory->create();
         $resultPage->setActiveMenu('LorisMenghi_Core::dashboard');
-        $resultPage->getConfig()->getTitle()->prepend(__('LM - Dashboard'));
+        $resultPage->getConfig()->getTitle()->prepend(__('LorisMenghi - Dashboard'));
         return $resultPage;
     }
 }
