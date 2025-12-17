@@ -1,4 +1,8 @@
 /* ====== LM top menu tile style ====== */
+.admin__menu #menu-lorismenghi-core-lm .item-dashboard > a::before {
+    content: none;
+}
+
 .admin__menu #menu-lorismenghi-core-lm > a {
     /* fa spazio per icona sopra e testo sotto */
     padding-top: 44px !important;
