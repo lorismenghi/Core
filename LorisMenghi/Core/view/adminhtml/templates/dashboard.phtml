@@ -4,6 +4,7 @@
     $contrassegnoLogoUrl = $block->getViewFileUrl('LorisMenghi_Core::images/logo_cod.png');
     $contactUrl = 'https://www.lorismenghi.com/contact';
     $spokiUrl = 'https://app.spoki.it/register';
+    $abandonedCartLogoUrl = $block->getViewFileUrl('LorisMenghi_Core::images/logo_AbandonedCartSpoki.jpg');
     $language = $block->getLanguageCode();
 ?>
 
@@ -84,6 +85,41 @@
                 <div class="lm-note">
                     <p class="en"><?= $block->escapeHtml(__('Need us to configure everything? We can handle the onboarding with a two-hour support package (€45 per hour).')) ?></p>
                     <p class="it"><?= $block->escapeHtml(__('Vuoi che configuriamo tutto noi? Possiamo gestire l’onboarding con un pacchetto di due ore di supporto (€45 all’ora).')) ?></p>
+                </div>
+            </div>
+            <div class="lm-card lm-module">
+                <div class="lm-module__head">
+                    <img src="<?= $block->escapeUrl($abandonedCartLogoUrl) ?>" alt="<?= $block->escapeHtml(__('Abandoned Cart module logo')) ?>" />
+                    <div>
+                        <h3><?= $block->escapeHtml(__('Spoki Abandoned Cart Whatsapp')) ?></h3>
+                        <p class="lm-meta">Version 1.2.0</p>
+                    </div>
+                </div>
+                <div class="lm-bilingual">
+                    <p class="en"><?= $block->escapeHtml(__('Recover abandoned carts with WhatsApp reminders for both logged-in and guest shoppers.')) ?></p>
+                    <p class="it"><?= $block->escapeHtml(__('Recupera i carrelli abbandonati con promemoria WhatsApp per clienti loggati e ospiti.')) ?></p>
+                </div>
+                <div class="lm-bilingual">
+                    <p class="en"><?= $block->escapeHtml(__('The module sends cron-based reminders to registered customers and shows an exit-intent pop-up to guests.')) ?></p>
+                    <p class="it"><?= $block->escapeHtml(__('Il modulo invia reminder via cron ai clienti registrati e mostra un pop-up di uscita agli ospiti.')) ?></p>
+                </div>
+                <ul class="lm-list">
+                    <li>
+                        <span class="en">Connect your Spoki automation endpoint and secret in Stores → Configuration.</span>
+                        <span class="it">Collega endpoint e secret di Spoki in Negozi → Configurazione.</span>
+                    </li>
+                    <li>
+                        <span class="en">Customize the WhatsApp template with cart summary and restore link.</span>
+                        <span class="it">Personalizza il template WhatsApp con riepilogo carrello e link di recupero.</span>
+                    </li>
+                    <li>
+                        <span class="en">Monitor send attempts in the admin log grid to avoid duplicates.</span>
+                        <span class="it">Monitora gli invii nella griglia log per evitare duplicati.</span>
+                    </li>
+                </ul>
+                <div class="lm-note">
+                    <p class="en"><?= $block->escapeHtml(__('Guest reminders require explicit consent and respect the configured cooldown windows.')) ?></p>
+                    <p class="it"><?= $block->escapeHtml(__('I reminder per ospiti richiedono consenso esplicito e rispettano le finestre di cooldown configurate.')) ?></p>
                 </div>
             </div>
         </div>
